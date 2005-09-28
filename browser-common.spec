@@ -18,7 +18,7 @@ Summary:	Base package for web browser components
 Summary(pl):	Podstawowy pakiet dla wtyczek przegl±darek WWW
 Name:		browser-common
 Version:	0.9
-Release:	0.4
+Release:	0.5
 License:	GPL
 Group:		Base
 URL:		http://www.mozilla.org/projects/plugins/
@@ -40,13 +40,14 @@ zgodnych z Netscape Plugin API (NPAPI).
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_libdir}/browser-common/{plugins,themes,extensions}
+install -d $RPM_BUILD_ROOT%{_datadir}/browser-common/{themes,extensions}
+install -d $RPM_BUILD_ROOT%{_libdir}/browser-common/plugins
 touch $RPM_BUILD_ROOT%{_libdir}/browser-plugins
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post
+%triggerpostun -- browser-plugins
 if [ -d %{_libdir}/browser-plugins ]; then
 	mv -f %{_libdir}/browser-plugins/* %{_libdir}/browser-common/plugins
 	rmdir %{_libdir}/browser-plugins
@@ -56,4 +57,6 @@ fi
 %files
 %defattr(644,root,root,755)
 %{_libdir}/browser-common
+%{_datadir}/browser-common
+# we will own the compat symlink
 %ghost %{_libdir}/browser-plugins
