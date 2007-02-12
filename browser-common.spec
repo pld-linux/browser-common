@@ -15,7 +15,7 @@
 # - mozilla-firefox
 # Themes (none exists yet)
 Summary:	Base package for web browser components
-Summary(pl.UTF-8):   Podstawowy pakiet dla komponentów przeglądarek WWW
+Summary(pl.UTF-8):	Podstawowy pakiet dla komponentów przeglądarek WWW
 Name:		browser-common
 Version:	0.9
 Release:	0.5
