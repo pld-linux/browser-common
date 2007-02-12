@@ -15,7 +15,7 @@
 # - mozilla-firefox
 # Themes (none exists yet)
 Summary:	Base package for web browser components
-Summary(pl):	Podstawowy pakiet dla komponentów przegl±darek WWW
+Summary(pl.UTF-8):   Podstawowy pakiet dla komponentÃ³w przeglÄ…darek WWW
 Name:		browser-common
 Version:	0.9
 Release:	0.5
@@ -32,8 +32,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This package provides base directories for browser components like
 plugins, extensions and themes.
 
-%description -l pl
-Ten pakiet dostarcza podstawowe katalogi dla komponentów przegl±darek
+%description -l pl.UTF-8
+Ten pakiet dostarcza podstawowe katalogi dla komponentÃ³w przeglÄ…darek
 takich jak wtyczki, rozszerzenia czy motywy.
 
 %prep
