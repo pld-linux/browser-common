@@ -1,0 +1,1 @@
+- arch dependant due %{_libdir} usage
